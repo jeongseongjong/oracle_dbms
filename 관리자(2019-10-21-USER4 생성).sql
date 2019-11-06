@@ -58,13 +58,26 @@
  
  
  
+ CREATE TABLESPACE book_DB
+ DATAFILE 'C:/bizwork/oracle/data/book.bdf'
+ SIZE 10M AUTOEXTEND ON NEXT 10K;
+ 
+ CREATE USER book IDENTIFIED BY 1234
+ DEFAULT TABLESPACE book_DB;
+ 
+ GRANT DBA TO book;
  
  
  
  
+ CREATE TABLESPACE cbt_DB
+ DATAFILE 'C:/bizwork/oracle/data/cbt.bdf'
+ SIZE 10M AUTOEXTEND ON NEXT 10K;
  
+ CREATE USER cbt IDENTIFIED BY cbt
+ DEFAULT TABLESPACE cbt_DB;
  
- 
+ GRANT DBA TO cbt;
  
  
  
